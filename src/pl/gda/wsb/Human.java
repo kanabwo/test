@@ -10,6 +10,7 @@ public class Human {
     String firstName;
     String lastName;
     String position;
+    Animal pet;
 
 
 }
