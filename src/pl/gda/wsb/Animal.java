@@ -43,4 +43,15 @@ public class Animal {
 
 
     private Double weight;
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", legsNum=" + legsNum +
+                ", type='" + type + '\'' +
+                ", species='" + species + '\'' +
+                ", weight=" + weight +
+                '}';
+    }
 }

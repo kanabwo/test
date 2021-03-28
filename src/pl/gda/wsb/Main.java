@@ -1,6 +1,8 @@
 package pl.gda.wsb;
 
-import java.sql.SQLOutput;
+import pl.gda.wsb.devices.Car;
+import pl.gda.wsb.devices.Phone;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -21,6 +23,7 @@ public class Main {
 //        Phone phone2 = new Phone();
         Human human1 = new Human("Jan", "Nowak", "Assistant" );
         Human human2 = new Human("Janina", "Kowal", "CEO" );
+        Human human3 = new Human("Janina", "Kowal", "CEO" );
 
         Animal animal1 = new Animal("kot","michal");
         Animal animal2 = new Animal("pies","rafal");
@@ -36,7 +39,7 @@ public class Main {
         else
             System.out.println("wiecej nog ma "+ animal2.name);
 
-        ArrayList <Human> hList = new ArrayList<Human>();
+        ArrayList <Human> hList = new ArrayList<>();
         hList.add(human1);
         hList.add(human2);
 
@@ -45,6 +48,8 @@ public class Main {
 
 
         }
+        human1.pet = animal1;
+
 
         animal1.feed();
         animal1.takeForAWalk();
@@ -55,9 +60,21 @@ public class Main {
         animal1.takeForAWalk();
         animal1.takeForAWalk();
         animal1.feed();
+        Car car1 = new Car("transit",Producer.FORD,80,1400,"blue");
+        human1.car = car1;
+        System.out.println(human1.lastName+" "+human1.pet.name+" "+human1.car.producer);
 
 
 
+        System.out.println("wynik porownania: "+human2.equals(human3));
+
+        System.out.println(human1);
+        System.out.println(animal1);
+        System.out.println(car1);
+        System.out.println(phone1);
+
+        human1.setSalary(100000.0);
+        System.out.println(human1.getSalary());
 
     }
 }
